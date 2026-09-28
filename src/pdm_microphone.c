@@ -103,6 +103,7 @@ int pdm_microphone_init(const struct pdm_microphone_config* config) {
     pdm_mic.filter.Gain = 16;
 
     pdm_mic.filter_volume = pdm_mic.filter.MaxVolume;
+    return 0;
 }
 
 void pdm_microphone_deinit() {
