@@ -10,6 +10,10 @@
 
 #include "hardware/pio.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef void (*pdm_samples_ready_handler_t)(void);
 
 struct pdm_microphone_config {
@@ -33,5 +37,9 @@ void pdm_microphone_set_filter_gain(uint8_t gain);
 void pdm_microphone_set_filter_volume(uint16_t volume);
 
 int pdm_microphone_read(int16_t* buffer, size_t samples);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
